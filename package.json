@@ -1,0 +1,19 @@
+{
+  "name": "mesto.github.io",
+  "version": "1.0.0",
+  "description": "project #11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roniroll/mesto.github.io.git"
+  },
+  "author": "Nikita Nedospasov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roniroll/mesto.github.io/issues"
+  },
+  "homepage": "https://github.com/roniroll/mesto.github.io#readme"
+}
