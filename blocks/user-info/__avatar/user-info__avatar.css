@@ -1,0 +1,7 @@
+.user-info_avatar {
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    border-radius: 70%;
+    outline-color: none;
+}
