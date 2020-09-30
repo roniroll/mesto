@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
     constructor(Url, headers) {
       this.Url = Url;
       this.headers = headers;

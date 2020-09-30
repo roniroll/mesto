@@ -1,4 +1,4 @@
-class Card { 
+export default class Card { 
     constructor(name, link, previewPop) {
         this.name = name;
         this.link = link;

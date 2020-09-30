@@ -1,6 +1,19 @@
+import UserInfo from './UserInfo';
+import PreviewPopup from './PreviewPopup';
+import Popup from './Popup';
+import FormValidator from './FormValidator';
+import Form from './Form';
+import EditInfoPopup from  './EditInfoPopup';
+import CardList from './CardList';
+import Card from './Card';
+import AvatarPopup from './AvatarPopup';
+import Api from './Api';
+import AddNewPlacePopup from './AddNewPlacePopup';
+import '../index.css'
+
 //Константы
 const api = new Api('https://nomoreparties.co/cohort12', 
-  headers = {
+   {
     authorization: 'f0ef6521-7d4a-46a8-b967-9fadfac4c6f5',
     'Content-Type': 'application/json'
   } 

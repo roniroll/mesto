@@ -1,4 +1,4 @@
-class CardList {
+export default class CardList {
     constructor(domElement, createCardFn) {
         this.domElement = domElement;
         this.createCard = createCardFn; 

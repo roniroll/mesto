@@ -1,4 +1,5 @@
-class PreviewPopup extends Popup {
+import Popup from './Popup.js'
+export default class PreviewPopup extends Popup {
     constructor(popupContainer) {
         super(popupContainer)
         this.image = this.popupContainer.querySelector('.popup__image')
