@@ -1,7 +1,7 @@
 export default class Api {
-    constructor(Url, headers) {
-      this.Url = Url;
-      this.headers = headers;
+    constructor(config) {
+      this.url = config.url
+      this.authorization = config.authorization
     }
 
     _getResponseData(res) {
@@ -11,22 +11,22 @@ export default class Api {
         return res.json();
     }
     
-    getInfoProfile() {
-        return fetch(`${this.Url}/users/me`, {
-            method: 'GET',
-            headers: this.headers
-            })
+    getInfoProfile () {
+        return fetch(`${this.url}/users/me`, {
+           headers: {
+               authorization: this.authorization
+           } 
+        })  
         .then(res => {
             return this._getResponseData(res) 
-        })
-    };
-
+        })}
    
     _
     getCards() {
-        return fetch(`${this.Url}/cards`, {
-            method: 'GET',
-            headers: this.headers
+        return fetch(`${this.url}/cards`, {
+            headers: {
+                authorization: this.authorization
+            }
         })
         .then(res => {
             return this._getResponseData(res) 
@@ -34,9 +34,12 @@ export default class Api {
     };
 
     patchInfoProfile(name, about) {  
-        return fetch(`${this.Url}/users/me`, {
+        return fetch(`${this.url}/users/me`, {
             method: 'PATCH',
-            headers: this.headers,
+            headers: {
+                authorization: this.authorization,
+                'Content-Type': 'application/json'
+              },
             body: JSON.stringify({
               name: name,
               about: about
