@@ -11,13 +11,12 @@ import Api from './Api';
 import AddNewPlacePopup from './AddNewPlacePopup';
 import '../index.css'
 
+
 //Константы
-const api = new Api('https://nomoreparties.co/cohort12', 
-   {
-    authorization: 'f0ef6521-7d4a-46a8-b967-9fadfac4c6f5',
-    'Content-Type': 'application/json'
-  } 
-);
+const api = new Api({
+  url: `${(NODE_ENV ==='development') ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12'}`,
+  authorization: 'f0ef6521-7d4a-46a8-b967-9fadfac4c6f5',
+})
 
 const placesList = document.querySelector('.places-list');
 const cardList = new CardList(placesList, createCardFn)
